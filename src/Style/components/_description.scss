@@ -1,0 +1,171 @@
+
+
+
+.description{
+    font-size: 1.6rem;
+    display: flex;
+
+    @include media-respond(small){
+        flex-direction: column;
+    }
+    @include media-respond(very-small){
+        flex-direction: column;
+    }
+
+    &-about{
+       flex:  0 0 60%;
+       background: rgba(255, 255, 255, .5);
+       box-shadow: $shadow;
+       margin-right: 2rem;
+
+       p{
+           @include below-small;
+       }
+
+       &-top{
+           padding: 2rem 3rem;
+           border-bottom: 3px solid rgba($primary-color, .1);
+       }
+       &-middle{
+         padding: 2rem 3rem;
+       }
+
+       &-bottom{
+           padding: 2rem 3rem;
+           width: 100%;
+           background: rgba(255, 255, 255, .5);
+           
+          .list{
+              list-style: none;
+              display: flex;
+              width: 70%;
+              margin: 0 auto;
+              flex-wrap: wrap;
+
+              @include media-respond(very-big){
+                  width: 100%;
+              }
+
+              &-item{
+                  text-transform: uppercase;
+                  flex: 0 0 50%;
+                  margin: 1rem 0;
+                  font-weight: 700;
+                  color: rgba($primary-color, .8);
+              }
+          }
+       }
+       &-footer{
+           padding: 2rem 4rem;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+          
+          
+           p{
+               font-size: 1.8rem;
+               text-transform: uppercase;
+               font-weight: 700;
+               color:  #ffaec0;
+
+               @include media-respond(very-big){
+               font-size: 1.6rem;
+            }
+           }
+
+           .profile{
+               &-pics{
+                   width: 7rem;
+                   height: 7rem;
+                   border-radius: 50%;
+
+                   @include media-respond(very-big){
+                       width: 5rem;
+                       height: 5rem;
+                   }
+               }
+           }
+
+       }
+     
+    }
+
+    &-review{
+       flex: 1;
+       align-self: stretch;
+
+       &-box{
+           width: 75%;
+           margin: 2rem auto;
+           box-shadow: $shadow;
+           padding: 4rem;
+
+           p{
+               @include below-small;
+           }
+
+           @include media-respond(tab-land){
+               width: 85%;
+           }
+
+           .user{
+              margin-top: 2rem;
+               display: flex;
+               justify-content: space-between;
+
+               &-info{
+                   display: flex;
+                   align-items: center;
+                   img{
+                       width: 6rem;
+                       height: 6rem;
+                       border: 2px solid #fff;
+                       border-radius: 50%;
+                   }
+                   &-bio{
+                       h5{
+                           text-transform: capitalize;
+                           font-size: 1.4rem;
+                           margin-left: .5rem;
+                       }
+                       p{
+                        text-transform: capitalize;
+                        font-size: 1.2rem;
+                        margin-left: .5rem; 
+                       }
+                   }
+               }
+               &-rating{
+                   h1{
+                       color: #f21170;
+                   }
+               }
+           }
+       }
+
+       &-button{
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           .btn{
+               border: none;
+               background: $primary-color;
+               padding: 1rem 3rem;
+               font-size: 1.7rem;
+               text-transform: uppercase;
+               color: #fff;
+               font-weight: 700;
+               transition: all .5s ease-in;
+
+               &:hover{
+                   box-shadow: $shadow;
+                   background: rgba($primary-color, .1);
+                   transform: translateY(1.2rem);
+                   color: #ce1f6a;
+               }
+           }
+       }
+    }
+}

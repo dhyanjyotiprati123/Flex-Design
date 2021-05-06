@@ -1,0 +1,47 @@
+
+@mixin Icon {
+    width: 3rem;
+    height: 3rem;
+    fill: $primary-color;
+}
+
+@mixin Pad {
+    padding: 2rem 3rem;
+}
+
+@mixin below-small {
+    @include media-respond(small){
+        font-size: 2rem;
+    }
+    @include media-respond(very-small){
+     font-size: 2.3rem;
+ }
+    
+}
+
+// media query section
+
+@mixin media-respond($breakpoint) {
+    @if $breakpoint == very-big{
+        @media only screen and(max-width: 1400px){@content};
+    }
+    @if $breakpoint == largest{
+        @media only screen and(max-width: 1200px){@content};
+    }
+    @if $breakpoint == tab-land{
+        @media only screen and(max-width: 900px){@content};
+    }
+    @if $breakpoint == medium{
+        @media only screen and(max-width: 800px){@content};
+    }
+    @if $breakpoint == small-medium{
+        @media only screen and(max-width: 700px){@content};
+    }
+    @if $breakpoint == small{
+        @media only screen and(max-width: 600px){@content};
+    }
+    @if $breakpoint == very-small{
+        @media only screen and(max-width: 500px){@content};
+    }
+    
+}

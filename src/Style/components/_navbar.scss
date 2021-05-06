@@ -1,0 +1,142 @@
+
+.navbar{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    .main-logo{
+        width: 6rem;
+        margin-left: 5rem;
+    }
+
+    .search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 40%;
+
+        &-input{
+          font-family: inherit;
+          font-size: 1.5rem;
+          border: none;
+          width: 85%;
+          height: 3.2rem;
+          padding: 0 2rem;
+          margin-right: -4rem;
+          background: #eee;
+          border-radius: 100px;
+          transition: all .4s ease;
+
+          &:focus{
+              outline: none;
+              width: 100%;
+              height: 3.5rem;
+          }
+        }
+
+        &-button{
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            background: #eee;
+
+            &:focus{
+                outline: none;
+            }
+
+            &:active{
+                transform: translateY(2px);
+            }
+
+        }
+
+        &-icon{
+            height: 2.5rem;
+            width: 2.5rem;
+            fill: green;
+        }
+    }
+
+    .navigation{
+        display: flex;
+        align-self: stretch;
+        padding: 0 2rem;
+        height: 100%;
+       
+        &-bookmark{
+            padding: 2rem;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+
+            &:hover{
+                background: $gradient;
+            }
+            &-icon{
+               @include Icon;
+            }
+        }
+
+       &-chat{
+            padding: 2rem;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+
+            &:hover{
+                background: $gradient;
+            }
+
+           &-icon{
+            @include Icon;
+           }
+       } 
+
+       &-user{
+           padding: 2rem;
+           cursor: pointer;
+           display: flex;
+           align-items: center;
+           height: 100%;
+
+           &:hover{
+               background: $gradient;
+           }
+
+           &-photo{
+            width: 5rem;
+            border-radius: 50%;
+            margin-right: 2rem;
+        }
+        &-name{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: $primary-color;
+        }
+       }
+       
+     &-notification{
+         width: 2rem;
+         height: 2rem;
+         border-radius: 50%;
+         background: #f21170;
+         color: #fff;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         position: absolute;
+         top: 2.2rem;
+         left: 1.4rem;
+     }
+
+    }
+}
